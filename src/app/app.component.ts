@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {NgxPermissionsService} from "ngx-permissions";
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'ng18';
+  permissions = ['ADMIN', 'GUEST'];
+
+  ngxPermission = inject(NgxPermissionsService);
+
+  ngOnInit() {
+    this.ngxPermission.loadPermissions(this.permissions);
+  }
 }
