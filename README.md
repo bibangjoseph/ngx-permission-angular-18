@@ -30,7 +30,7 @@ Ce projet démontre comment intégrer et utiliser `ngx-permissions` pour gérer 
 
 ## Configuration
 
-1. Ouvrez `src/app/app.module.ts` et ajoutez `NgxPermissionsModule` à vos imports :
+1. Ouvrez `src/app/app.config.ts` et ajoutez `NgxPermissionsModule` à vos imports :
 
     ```typescript
     import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
