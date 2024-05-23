@@ -6,8 +6,14 @@ import {NgxPermissionsModule} from "ngx-permissions";
 
 export const appConfig: ApplicationConfig = {
   providers: [
+
+    // Import providers from NgxPermissionsModule
     importProvidersFrom(NgxPermissionsModule.forRoot()),
+
+    // Provide zone change detection with event coalescing
     provideZoneChangeDetection({ eventCoalescing: true }),
+
+    // Provide the router configuration
     provideRouter(routes),
   ]
 };
